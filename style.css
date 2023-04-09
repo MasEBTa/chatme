@@ -1,0 +1,574 @@
+/*=============================================================
+|||||||||||||||||||||||Display Full Body|||||||||||||||||||||||
+=============================================================*/
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+#full-body {
+	width: 100%;
+	height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*=============================================================*/
+
+/*=============================================================
+||||||||||||||||||||||Display Main header||||||||||||||||||||||
+=============================================================*/
+@font-face {
+    font-family: "Satisfy-Regular";
+    src: url('font/Satisfy-Regular.ttf');
+}
+.titleText {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: "Satisfy-Regular";
+    font-size: 2rem;
+}
+
+/*=============================================================
+|||||||||||||||||||||||Display Main Body|||||||||||||||||||||||
+=============================================================*/
+#utama {
+    min-height: 82%;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+    /*=====================================================
+    ||||||||||||||||||Display Section kiri|||||||||||||||||
+    =======================================================*/
+    main #kiri {
+        display: flex;
+        min-height: 100%;
+        flex: 50%;
+        background-color: rgb(250, 250, 250);
+        margin-right: 0;
+        justify-content: right;
+    }
+    #kiri .gbig {
+        margin-top: 30px;
+        max-width: 379px;
+        max-height: 579px;
+        height: auto;
+    }
+    /*=====================================================*/
+
+    /*=====================================================
+    |||||||||||||||||||Display aside kanan|||||||||||||||||
+    =======================================================*/
+    main #kanan {
+        display: inline-block;
+        min-height: 100%;
+        flex: 50%;
+        background-color: rgb(250, 250, 250);
+        text-align: center;
+    }
+            /*========================================================
+            |||||||||||||||||||Display flex box kanan|||||||||||||||||
+            =========================================================*/
+            @media only screen and (max-width: 875px) {
+                #kanan #form {
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+            }
+            #kanan #form {
+                flex: 50%;
+                margin-top: 45px;
+                margin-left: 32px;
+                width: 360px;
+                background-color: white;
+                border: 0.5px solid rgb(216, 216, 216);
+            }
+            #kanan #form header, #kanan #form main, #kanan #form main form, #kanan #form footer {
+                width: 100%;
+                min-width: 360px;
+            }
+            /* #form main {
+                align-content: center;
+            }
+            #form main form {
+                display: inline-block;
+            } */
+            /*=============================================================
+            ||||||||||||||||||||||||Display signup|||||||||||||||||||||||||
+            =============================================================*/
+            #signUp {
+                margin-top: 15px;
+                margin-left: 32px;
+                width: 360px;
+                background-color: white;
+                border: 0.5px solid rgb(216, 216, 216);
+                padding-top: 25px;
+                padding-bottom: 25px;
+                font-size: 0.8rem;
+            }
+            #signUp div {
+                width: 100%;
+                min-width: 360px;
+            }
+            #signUp a {
+                color: rgb(13, 169, 253);
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+            /*=============================================================*/
+        /* =================display input=================== */
+        #kanan main form input {
+            width: 75%;
+            height: 35px;
+            border-radius: 3.5px;
+            margin-bottom: 5px;
+            border: 0.5px solid rgb(216, 216, 216);
+            padding-left: 7px;
+            font-size: 0.7rem;
+            background-color: rgb(250, 250, 250);
+        }
+        #kanan main form textarea {
+            width: 75%;
+            min-height: 60px;
+            border-radius: 3.5px;
+            margin-bottom: 5px;
+            border: 0.5px solid rgb(216, 216, 216);
+            padding-left: 7px;
+            font-size: 0.7rem;
+            background-color: rgb(250, 250, 250);
+        } 
+        #kanan main form input::-webkit-input-placeholder {
+            color: rgb(160, 160, 160);
+        }
+        #kanan main form textarea::-webkit-textarea-placeholder {
+            color: rgb(160, 160, 160);
+        }
+        /* ============display label input============== */
+            /* label usser name */
+            #unamelbl {
+                text-align: left;
+                display: inline-block;
+                width: 75%;
+                height: 5px;
+                border-radius: 3.5px;
+                margin-bottom: 5px;
+                padding-left: 7px;
+                font-size: 0.7rem;
+                color: rgb(160, 160, 160);
+                transform: translateY(-90px);
+                visibility: hidden;
+            }
+            /* label password */
+            #unamelb3 {
+                text-align: left;
+                display: inline-block;
+                width: 75%;
+                height: 5px;
+                margin-bottom: 5px;
+                padding-left: 7px;
+                font-size: 0.7rem;
+                color: rgb(160, 160, 160);
+                transform: translateY(-46px);
+                visibility: hidden;
+            }
+            /* label show password */
+            #unamelb23 {
+                text-align: left;
+                display: inline-block;
+                width: 75%;
+                height: 5px;
+                margin-bottom: 5px;
+                padding-left: 75%;
+                font-size: 1rem;
+                color: rgb(87, 87, 87);
+                transform: translateY(-52px);
+                visibility: hidden;
+                justify-self: end;
+            }
+            /* label hide password */
+            #unamelb24 {
+                text-align: left;
+                width: 75%;
+                height: 5px;
+                margin-bottom: 5px;
+                padding-left: 75%;
+                font-size: 1rem;
+                color: rgb(87, 87, 87);
+                transform: translateY(-52px);
+                visibility: hidden;
+                justify-self: end;
+                display: none;
+            }
+        /* =================Penyesuaian Translasi=================== */
+        #unamelbl2 {
+            transform: translateY(-18px);
+        }
+        #unamelbl4 {
+            transform: translateY(-30px);
+        }
+        #buttonlogin {
+            transform: translateY(-50px);
+        }
+    /* =================display button=================== */
+        #kanan main form button {
+            width: 78%;
+            height: 33px;
+            border-radius: 5px;
+            margin-top: 8px;
+            border: none;
+            background-color: rgb(13, 169, 253);
+            color: white;
+        }
+        /* disable  button */
+        #kanan main form button:disabled, #kanan main form button[disabled] {
+            background-color: rgba(13, 169, 253, 0.3);
+        }
+    /*=====================================================*/
+    /* =================display pemisah=================== */
+        #pemisah {
+            margin-top: 0;
+            transform: translateY(-30px);
+        }
+        #pemisah hr {
+            display: inline-block;
+            width: 105px;
+            color: rgb(160, 160, 160);
+        }
+        #pemisah sup {
+            margin-right: 19px;
+            margin-left: 19px;
+            color: rgb(160, 160, 160);
+        }
+    /*=====================================================*/
+    /* =================display Login fb=================== */
+        #fblogo {
+            border-radius: 50%;
+            width: 1rem;
+            height: 1rem;
+        }
+        #fblogin span {
+            display: inline-block;
+            margin-left: 3px;
+            transform: translateY(-3px);
+            font-size: small;
+            font-weight: bold;
+            color: #3b5998;
+            border: none;
+            background: none;
+        }
+        #fblogin {
+            margin-bottom: 32px;
+        }
+    /*=====================================================*/
+/*=============================================================
+            ||||||||||||||||||||||||Display signup|||||||||||||||||||||||||
+            =============================================================*/
+            #signUp {
+                margin-top: 15px;
+                margin-left: 32px;
+                width: 360px;
+                background-color: white;
+                border: 0.5px solid rgb(216, 216, 216);
+                padding-top: 25px;
+                padding-bottom: 25px;
+                font-size: 0.8rem;
+            }
+            #signUp div {
+                width: 100%;
+                min-width: 360px;
+            }
+            #signUp a {
+                color: rgb(13, 169, 253);
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+            /*=============================================================*/
+            /*=============================================================
+            ||||||||||||||||||||||||Display get app|||||||||||||||||||||||||
+            =============================================================*/
+            #getapp {
+                margin-left: 32px;
+                width: 360px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                font-size: 0.8rem;
+            }
+            #getapp p {
+                margin-top: 7px;
+                margin-bottom: 20px;
+            }
+            .app-img {
+                width: 145px;
+                height: 45px;
+            }
+            #getapp {
+                margin-bottom: 32px;
+            }
+
+/*=============================================================
+||||||||||||||||||||||||Display Footer|||||||||||||||||||||||||
+=============================================================*/
+#footer-utama {
+    min-height: 18%;
+    padding-top: 70px;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+}
+#footer-utama div {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 50px;
+}
+#footer-utama span {
+    display: inline-block;
+    min-width: 70px;
+    margin-right: 25px;
+    margin-top: 35px;
+    color: rgb(160, 160, 160);
+}
+#footer-utama p {
+    text-align: center;
+    margin-top: 35px;
+    color: rgb(160, 160, 160);
+}
+/*=============================================================*/
+        
+/*=============================================================
+|||||||||||||||||||||||Display Modal box|||||||||||||||||||||||
+=============================================================*/
+/* =================The Modal (background)=================== */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height  */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    align-items: center;
+    /* display: flex; */
+  }
+  
+  /* Modal Content/Box */
+  .modal-section {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 80%;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/*===============================================================
+|||||||||||||||||||profil in modal display|||||||||||||||||||||||
+===============================================================*/
+.modal-section {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+  }
+  /* header */
+  .modal-section header {
+    width: 100%;
+  }
+  /* footer */
+  .modal-section footer {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  /* main */
+  .modal-section .body-prof {
+      text-align: center;
+      align-items: center;
+      display: flex;
+  }
+  /* article */
+  .modal-section .body-prof article {
+      text-align: center;
+      width: 50%;
+      display: flex;
+      /* height: 100%; */
+      align-items: center;
+  }
+  /* aside */
+  .modal-section .body-prof aside {
+      text-align: center;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .modal-section .prof-img {
+    max-width: 300px;
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    display: inline;
+    margin:auto;
+    border-radius: 50%;
+  }
+  
+  .modal-section .title-prof {
+    color: grey;
+    font-size: 18px;
+  }
+  .modal-section .body-prof {
+    text-align: center;
+  }
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .modal-section a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  .modal-section a svg {
+    width: 22px;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+/* =================media query=================== */
+@media (max-width: 875px) {
+    main {
+        flex-direction: column;
+    }
+    main #kiri {
+        display: none;
+    }
+    main #kanan {
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+    }
+    main #kanan #form {
+        margin-left: 16px;
+    }
+    main #kanan #signUp {
+        margin-left: 16px;
+    }
+    #getapp {
+        margin-left: 16px;
+        /* color: red; */
+    }
+    #footer-utama {
+        display: none;
+    }
+    .modal-section .body-prof aside {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 380px) {
+    main #kanan #form {
+        margin-left: 8px;
+    }
+    main #kanan #signUp {
+        margin-left: 8px;
+    }
+    #getapp {
+        margin-left: 8px;
+    }
+}
+@media (max-width: 368px) {
+    main #kanan #form {
+        margin-left: 4px;
+    }
+    main #kanan #signUp {
+        margin-left: 4px;
+    }
+    #getapp {
+        margin-left: 4px;
+    }
+}
+@media (max-width: 364px) {
+    main #kanan #form {
+        margin-left: 2px;
+    }
+    main #kanan #signUp {
+        margin-left: 2px;
+    }
+    #getapp {
+        margin-left: 2px;
+    }
+}
+@media (max-width: 360px) {
+    main #kanan #form {
+        margin-left: 0;
+    }
+    main #kanan #signUp {
+        margin-left: 0;
+    }
+    #getapp {
+        margin-left: 0;
+    }
+}
+/*=============================================================*/
+
+/*===============================================================
+||||||||||||||||||||||||Alert Box message||||||||||||||||||||||||
+===============================================================*/
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    display: none;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
